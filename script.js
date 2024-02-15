@@ -57,10 +57,10 @@ class FlowFieldEffect {
         this.gradient = this.#ctx.createLinearGradient(0, 0, this.#width, this.#height);
         this.gradient.addColorStop("0.1","#ff5c33");
         this.gradient.addColorStop("0.2","#ff66b3");
-        this.gradient.addColorStop("0.4","#ccccff");
-        this.gradient.addColorStop("0.6","#b3ffff");
-        this.gradient.addColorStop("0.8","#80ff80");
-        this.gradient.addColorStop("0.9","#ffff33");
+        this.gradient.addColorStop("0.4","#ccccff00");
+        this.gradient.addColorStop("0.6","#b3ffff00");
+        this.gradient.addColorStop("0.8","#9f44b1");
+        this.gradient.addColorStop("0.9","#847be6");
     }
     #drawLine(angle, x, y){
         let positionX = x;
@@ -73,7 +73,7 @@ class FlowFieldEffect {
         if (distance > 300000) distance = 300000
 
         // min length
-        else if (distance < 50000) distance = 50000
+        else if (distance < 40000) distance = 40000
 
         let length = distance*0.00005;
         this.#ctx.beginPath();
